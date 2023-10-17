@@ -91,7 +91,7 @@ export function updateGrades(subject: String) {
                 break;
         }
         (global as any).grades[subjectIndex].gradesData.predicted = predicted;
-        (global as any).grades[subjectIndex].gradesData.average = average;
+        (global as any).grades[subjectIndex].gradesData.average = Math.round(average * 100) / 100;
     }
 
     sum = 0;
